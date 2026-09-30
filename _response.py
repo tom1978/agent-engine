@@ -1518,8 +1518,8 @@ def handle_model_response_chunk(
             #修改    # 
             elif (
                 model_response_event.content
-                or model_response_event.citations is not None
-                or model_response_event.provider_data is not None
+                # or model_response_event.citations is not None
+                # or model_response_event.provider_data is not None
             ):
                 yield handle_event(
                     create_run_output_content_event(
