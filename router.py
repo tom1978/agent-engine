@@ -82,8 +82,9 @@ async def run_entity(
         )
 
         run_kwargs: dict = {}
-        if ui_deps:
-            run_kwargs["add_dependencies_to_context"] = True
+        # 注释以下代码，只将depandency在tool或提示语中使用
+        # if ui_deps:
+        #     run_kwargs["add_dependencies_to_context"] = True
 
         # 4. Determine if this is a resume (trailing ToolMessages) or fresh run
         if tool_messages:
@@ -243,4 +244,3 @@ def attach_routes(
         return {"status": "available"}
 
     return router
-
